@@ -1,0 +1,93 @@
+section {
+  height: calc(100% - 60px);
+  display: flex;
+  .tabs {
+    width: 15%;
+    height: 100%;
+    border-right: 1px solid #eee;
+    background: var(--white);
+
+    .title {
+      width: 100%;
+      background: var(--bg);
+      h1 {
+        margin: 0;
+        color: var(--white);
+        cursor: pointer;
+      }
+    }
+    ul {
+
+      .nav-item {
+        width: 100%;
+        cursor: pointer;
+
+        .nav-link {
+          color: var(--black);
+          padding: 15px 5px;
+          border-radius: 0;
+          border: 1px solid #eeeeee00;
+
+          &:hover,
+          &:active {
+            background: var(--hover);
+          }
+
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .space {
+      height: calc(100% - 276px);
+    }
+    .out {
+      .nav-item {
+        border-top: 1px solid #eee;
+      }
+    }
+  }
+  .pages {
+    width: 85%;
+  }
+}
+
+.active {
+  color: var(--white) !important;
+  background: var(--bg) !important;
+}
+
+
+// @media (min-width: 1100px) and (max-width:1400px) {
+//   section {
+//     .tabs {
+//       width: 15%;
+//     }
+//     .pages {
+//       width: 85%;
+//     }
+//   }
+// }
+
+// @media (min-width: 810px) and (max-width:1100px) {
+//   section {
+//     .tabs {
+//       width: 20%;
+//     }
+//     .pages {
+//       width: 80%;
+//     }
+//   }
+// }
+
+// @media (min-width: 600px) and (max-width:810px) {
+//   section {
+//     .tabs {
+//       width: 25%;
+//     }
+//     .pages {
+//       width: 75%;
+//     }
+//   }
+// }

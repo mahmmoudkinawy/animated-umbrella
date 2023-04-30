@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg : #dd9a3b;
+  --bg-shadow : #dd9a3b50;
+  --transition: all 0.4s ease;
+  --white : #fff;
+  --black : #000;
+  --hover : hsla(35, 70%, 55%, 0.30);
+  --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.edit {
+  color: #3568DE;
+}
+
+.del {
+  color: #f44336;
+}
+
+.error {
+  color: #f44336;
+  font-size: 12px;
+  font-weight: 500;
+}

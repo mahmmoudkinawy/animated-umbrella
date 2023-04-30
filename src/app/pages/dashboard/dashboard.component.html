@@ -1,0 +1,56 @@
+<!-- <app-header></app-header> -->
+<section>
+  <div class="tabs">
+
+
+    <div class="title text-center">
+      <h1 class="py-3" routerLink="/dashboard">Dashboard</h1>
+    </div>
+
+    <ul class="nav nav-tabs">
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['manage-users']" [routerLinkActive]="['active']">
+          <i class='bx bxs-user-account px-2'></i>
+          Manage Users
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['manage-centers']" [routerLinkActive]="['active']">
+          <i class='bx bxs-user-account px-2'></i>
+          Manage Centers
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['manage-subjects']" [routerLinkActive]="['active']">
+          <i class='bx bxs-user-account px-2'></i>
+          Manage Subjects
+        </a>
+      </li>
+
+    </ul>
+
+<!--
+    <div class="space"></div>
+
+    <ul class="nav nav-tabs border-0 out">
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="logOut()">
+          <i class='bx bx-log-out bx-rotate-180 px-2' ></i>
+          LogOut
+        </a>
+      </li>
+
+    </ul> -->
+
+
+
+
+  </div>
+  <div class="pages p-4">
+    <router-outlet></router-outlet>
+  </div>
+</section>

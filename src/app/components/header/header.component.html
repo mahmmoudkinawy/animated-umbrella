@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/4762/4762311.png" class="" alt="logo" width="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['#']" [routerLinkActive]="['active']">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['about']" [routerLinkActive]="['active']">About</a>
+        </li>
+
+        <li class="nav-item" *ngIf="dashboard">
+          <a class="nav-link" [routerLink]="['dashboard']" [routerLinkActive]="['active']">Dashboard</a>
+        </li>
+
+      </ul>
+      <div class="icons">
+
+        <a class="nav-icon" *ngIf="!login" matTooltip="Login" routerLink="/login">
+          <mat-icon>login</mat-icon>
+        </a>
+
+        <a class="nav-icon" *ngIf="login" matTooltip="LogOut" (click)="logOut()">
+          <mat-icon>logout</mat-icon>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>

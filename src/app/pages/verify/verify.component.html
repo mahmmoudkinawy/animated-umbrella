@@ -1,0 +1,58 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="form-container col-lg-6 col-md-12 mx-auto">
+        <mat-card>
+          <mat-card-content>
+            <div
+              class="title text-center text-capitalize my-3"
+              data-aos="fade-down"
+              data-aos-duration="800">
+              <h1 class="fw-bold">Verify</h1>
+            </div>
+
+            <form [formGroup]="phoneForm">
+
+              <mat-form-field appearance="fill" class="my-2">
+                <mat-label>phone Number</mat-label>
+                <input type="text" formControlName="phoneNumber" [disabled]="otp" matInput placeholder="Ex. +201095245526">
+                <mat-error
+                *ngIf="phoneForm.controls.phoneNumber && phoneForm.controls.phoneNumber.invalid && phoneForm.controls.phoneNumber.touched">
+                Phone Number is <strong>required</strong>
+              </mat-error>
+              </mat-form-field>
+              <form [formGroup]="otpForm">
+
+                <mat-form-field appearance="fill" class="my-2" *ngIf="otp">
+                  <mat-label>Enter Otp</mat-label>
+                  <input type="text" matInput #otp formControlName="otp" minlength="6"maxlength="6" placeholder="Ex. 544858">
+                  <mat-hint align="end">{{otp.value.length}} / 6</mat-hint>
+                  <mat-error *ngIf="otpForm.controls.otp && otpForm.controls.otp.invalid && otpForm.controls.otp.touched">
+                    Otp is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+
+                <div class="button text-center my-3">
+                  <button *ngIf="!otp" type="submit" class="btn btn-warning rounded-pill w-100 btn-lg" [disabled]="phoneForm.invalid" (click)="sentCode()">Sent Code</button>
+                  <button *ngIf="otp" type="submit" class="btn btn-warning rounded-pill w-100 btn-lg" (click)="sentOtp()">Verify Otp Code</button>
+                </div>
+
+              </form>
+
+            </form>
+
+            <div class="login-signup my-4 text-center" data-aos="fade-down" data-aos-duration="1500">
+              <span class="text">I`m a member
+                <a routerLink="/login">
+                  Sign in now
+                </a>
+              </span>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+</section>
